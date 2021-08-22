@@ -38,7 +38,7 @@ body {
 /* NAV BAR */
 nav {
   display: flex;
-  position: absolute;
+  position: fixed;
   justify-content: space-around;
   align-items: center;
   width: 100%;
@@ -56,7 +56,6 @@ nav {
   justify-content: space-around;
   width: 40%;
 }
-
 
 .nav-links li {
   list-style: none;
@@ -79,9 +78,9 @@ nav {
 
 .switch {
   position: absolute;
-  width: 104px;
+  width: 74px;
   height: 31px;
-  left: 1420px;
+  right: 3%;
   top: 35px;
 }
 .switch input {
@@ -212,11 +211,11 @@ h2 {
 
 @media screen and (max-width: 1024px) {
   .nav-links {
-      display: flex;
-      position: relative;
-      justify-content: space-around;
-      width: 50%;
-      left: 2%;
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+    width: 50%;
+    left: 2%;
   }
   .switch {
     position: absolute;
@@ -279,7 +278,7 @@ h2 {
 
 @media screen and (max-width: 768px) {
   body {
-    overflow-x: hidden;
+    overflow-x: hidden !important;
   }
 
   /* BLUE CIRCLE IN NAVBAR */
@@ -312,8 +311,11 @@ h2 {
   nav {
     width: 100%;
     height: 74px;
-    background: tomato;
     box-shadow: 0px 4px 4px rgba(255, 255, 255, 0);
+  }
+
+  #click:checked ~ nav{
+    transform: translateX(0%);
   }
 
   h2 {
@@ -325,40 +327,34 @@ h2 {
   .nav-links {
     position: absolute;
     height: 70vh;
-    top: 8.5vh;
+    top: 7vh;
     background-color: white;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 12px;
     display: flex;
     flex-direction: column;
     font-size: 12px;
-    line-height: normal;
+    line-height: 100px;
+    line-height: 14px;
     align-items: center;
     padding: 20px;
-    width: 300px;
-    margin-left: 55px;
-    transform: translateX(200%);
+    width: 255px;
+    margin-left: 40px;
+    transform: translateX(100%);
     transition: transform 0.5s ease-in;
   }
 
   .nav-links li {
     opacity: 0;
-    
   }
 
 
-  #ot, #au, #ue, #oh, #os {
-    font-size: 12px;
-    line-height: 1px;
-    justify-content: space-around;
-  }
 /* ICONS CSS (INSTAGRAM , TWITTER , LINKEDIN )  */
 
   .icons {
     display: block;
     font-size: large;
     margin: 10px;
-    margin-right: 40px;
   }
 .fa-linkedin {
   margin-left: 10px;
